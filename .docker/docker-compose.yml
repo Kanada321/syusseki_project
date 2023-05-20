@@ -70,7 +70,7 @@ services:
 ### Nodejs(Laravel) ################################################
   nodejs:
     container_name: ${PROJECT_NAME}-nodejs
-    image: node:18.16.1-alpine3.16
+    image: node:18.12.1-alpine3.16
     tty: true
     volumes:
       - ${WORK_DIR_BACKEND}:/var/www/application:delegated
@@ -80,14 +80,14 @@ services:
       - backend
 
 ### Nodejs(Next) #########################################
-  next:
+  frontend:
     container_name: ${PROJECT_NAME}-next
     build: ./next
     volumes:
       - ${WORK_DIR_FRONTEND}:/app
     command: 'yarn dev'
     ports:
-      - 3000:3000
+      - "${FRONT_PORT}:3000"
     networks:
       - frontend
 
