@@ -1,3 +1,4 @@
 .idea/
 .docker/logs/*
 .DS_Store
+.syusseki_data/
