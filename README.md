@@ -31,9 +31,10 @@ docker-compose down
 build:  
 docker-compose build
 
-## next.js 
-docker-compose exec frontend yarn  
+## next.js
 docker-compose exec frontend npm run dev
+docker-compose exec frontend npm run build
+docker-compose exec frontend yarn  
 dev:  
 docker-compose exec frontend yarn dev  
 axios:  
