@@ -8,7 +8,7 @@ docker-compose build
 
 ## 初回は。NEXTとLaravelを入れる
 # docker compose run --rm frontend npx create-next-app@latest --experimental-app
-docker compose run --rm frontend npx create-next-app@13.4.1 --tailwind rsc-supabase --use-npm
+docker compose run --rm frontend npx create-next-app@13.4.1 --tailwind --use-npm
 docker compose run --rm api composer create-project laravel/laravel:^10.0 .
 
 ## Dockerコンテナ起動
@@ -33,7 +33,7 @@ docker-compose build
 
 ## next.js 
 docker-compose exec frontend yarn  
-docker-compose exec frontend yarn dev
+docker-compose exec frontend npm run dev
 dev:  
 docker-compose exec frontend yarn dev  
 axios:  

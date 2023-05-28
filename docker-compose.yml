@@ -87,12 +87,12 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ${WORK_DIR_FRONTEND}:/app:cached
-    command: 'yarn dev'
+    command: 'npm run dev'
     stdin_open: true
     tty: true
-    environment:
+#    environment:
       # - CHOKIDAR_USEPOLLING=true
-      - WATCHPACK_POLLING=true
+      # - WATCHPACK_POLLING=true
     depends_on:
       - nginx
     ports:
